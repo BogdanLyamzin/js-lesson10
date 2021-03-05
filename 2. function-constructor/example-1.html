@@ -9,15 +9,34 @@
 <body>
     <script>
 
-        function createObj() {
-            const obj = {
-                name: "Котики",
-                "second name": "Зайчики"
+        function User(name, lastName, birthday) {
+            // console.log(this);
+            // this = {}
+            this.name = name;
+            this.lastName = lastName;
+            this.birthday = birthday;
+
+            this.getAge = function(){
+
             };
-            return obj;
+
+            // return this;
         }
-        const user = createObj();
-        console.log(user)
+        // createUser("Александр", "Котик", "05.02.2016");
+        // new createUser("Александр", "Котик", "05.02.2016");
+        const user1 = new User("Александр", "Котик", "05.02.2016");
+        /*
+            this = {};
+            this.name = name;
+            this.lastName = lastName;
+            this.birthday = birthday;
+
+            this.getAge = function(){
+
+            };
+            return this;
+        */
+        console.log(user1);
 
 
         // const user1 = User(); // this будет равен Window
